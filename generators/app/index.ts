@@ -15,7 +15,7 @@ module.exports = class extends Generator {
 
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
-      this.props = props;
+      (<any>this).props = props;
     });
   }
 
@@ -38,6 +38,12 @@ module.exports = class extends Generator {
     this.fs.copy(
       this.templatePath(`.env`),
       this.destinationPath(`config/.env`));
+    this.fs.copy(
+      this.templatePath(`.dockerignore`),
+      this.destinationPath(`.dockerignore`));
+    this.fs.copy(
+      this.templatePath(`Dockerfile`),
+      this.destinationPath(`Dockerfile`));
   }
 
   _addDependencies(){

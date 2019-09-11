@@ -4,14 +4,14 @@ import * as dotEnv from "dotenv";
 import * as path from "path"
 import * as prompt from "prompt"
 
-let configPath = path.join(__dirname,"./config/.env")
+let configPath = path.join(__dirname,"../config/.env")
 dotEnv.config({path: configPath});
 
 var app = module.exports = loopback();
 
 app.start = function () {
   // start the web server
-  return app.listen(function () {
+  return app.listen(function () { 
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', baseUrl);
