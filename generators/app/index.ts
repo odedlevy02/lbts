@@ -37,7 +37,7 @@ module.exports = class extends Generator {
       this.destinationPath(`tsconfig.json`));
     this.fs.copy(
       this.templatePath(`.env`),
-      this.destinationPath(`config/.env`));
+      this.destinationPath(`.env`));
     this.fs.copy(
       this.templatePath(`.dockerignore`),
       this.destinationPath(`.dockerignore`));

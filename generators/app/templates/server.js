@@ -4,7 +4,7 @@ import * as dotEnv from "dotenv";
 import * as path from "path"
 import * as prompt from "prompt"
 
-let configPath = path.join(__dirname,"../config/.env")
+let configPath = path.join(__dirname,"../.env")
 dotEnv.config({path: configPath});
 
 var app = module.exports = loopback();
