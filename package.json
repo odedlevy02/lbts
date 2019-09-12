@@ -1,6 +1,6 @@
 {
   "name": "generator-lbts",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Generator for converting loopback default created package to a typescript with autoupdate",
   "homepage": "",
   "author": {
